@@ -22,7 +22,6 @@ Fixed::~Fixed() {
 } 
 
 int Fixed::getRawBits(void) const {
-    std::cout << "getRawBits member function called" <<std::endl;
     return this->_fixedPointValue;
 }
 
@@ -32,12 +31,14 @@ void Fixed::setRawBits(int const raw) {
 
 
 //converting from int into fixedPointFloat
+//_fractionalBits is 8, so we push this numeber (as bits) to the left as much as 8
 Fixed::Fixed(const int intVal) {
     std::cout << "Int constructor called" << std::endl;
     this->_fixedPointValue = intVal << _fractionalBits;
 }
 
-//converting from float into fixedPointFloat 
+//converting from float into fixedPointFloat
+//roundf:반올림  
 Fixed::Fixed(const float floatVal) {
     std::cout << "Float constructor called" << std::endl;
     this->_fixedPointValue = roundf(floatVal * (1 << _fractionalBits));
