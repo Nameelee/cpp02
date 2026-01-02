@@ -2,7 +2,7 @@
 # define POINT_H
 
 # include "Fixed.h"
-
+//Point 클래스가 **"불변 객체(Immutable Object)
 class Point {
 
     private:
