@@ -17,7 +17,12 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
     //과제 조건: edge나 vertex에 있는 건 false
     if (ab_val == 0 || bc_val == 0 || ca_val == 0)
         return (false);
-    
+    //bsp 함수 입장에서는 사용자가 점 A,B,C를 시계 방향으로 줄지, 반시계 방향으로 줄지 알 수가 없습니다.
+    //사용자가 A→B→C 순서로 주면 **(모두 양수)**가 나옵니다.
+    //사용자가 A→C→B 순서로 주면 **(모두 음수)**가 나옵니다. So all > or all < both works  
+    if (ab_val > 0 && bc_val > 0 && ca_val > 0)
+        return (true);
+
     if (ab_val < 0 && bc_val < 0 && ca_val < 0)
         return (true);
     

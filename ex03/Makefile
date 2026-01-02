@@ -5,7 +5,9 @@ CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -I. -g
 
 SRCS		= bsp.cpp \
-			  main.cpp
+			  main.cpp \
+			  Fixed.cpp \
+			  Point.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
