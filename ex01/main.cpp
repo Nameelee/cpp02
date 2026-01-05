@@ -9,6 +9,7 @@ int main(void) {
 
     a = Fixed(1234.4321f);
 
+    // << from stdlib take cares of only int but 'I; implemented '<<' also for the fixed float 
     std::cout << "a is " << a << std::endl;
     std::cout << "b is " << b << std::endl;
     std::cout << "c is " << c << std::endl;

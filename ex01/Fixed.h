@@ -8,7 +8,7 @@ class Fixed {
 
     private:
         int _fixedPointValue;
-        static const int _fractionalBits = 8; 
+        static const int _fractionalBits = 8; //8비트는 2^8=256가지를 표현할 수 있다
 
     public:
         Fixed();

@@ -32,6 +32,7 @@ void Fixed::setRawBits(int const raw) {
 
 //converting from int into fixedPointFloat
 //_fractionalBits is 8, so we push this numeber (as bits) to the left as much as 8
+//  '<<' means *2^8(256)
 Fixed::Fixed(const int intVal) {
     std::cout << "Int constructor called" << std::endl;
     this->_fixedPointValue = intVal << _fractionalBits;
@@ -48,6 +49,7 @@ float Fixed::toFloat(void) const {
     return (float)this->_fixedPointValue / (1 << _fractionalBits);
 }
 
+//    '>>' means / 2^8(256)
 int Fixed::toInt(void) const {
     return this->_fixedPointValue >> _fractionalBits;
 }
